@@ -1,0 +1,34 @@
+### Lista todos os clientes
+
+GET http://localhost:3000/client
+
+### Obtém informações de um cliente específico
+
+GET http://localhost:3000/client/1
+
+### Atualiza informações de um cliente
+PATCH  http://localhost:3000/client/1
+Content-Type: application/json
+
+{
+   "name": "Kuroda",
+   "id":2
+}
+
+### Deleta informações de um cliente
+
+DELETE   http://localhost:3000/client/1
+
+###Criar informação de um cliente
+
+POST   http://localhost:3000/client/
+Content-Type: application/json
+
+{
+   "name": "Aoi Ashito",
+   "cpf": "033.011",
+   "email": "aoiashi@email.com",
+   "dateofBirth":"2000-10-15",
+   "login":"bluedeer",
+   "password":"123"
+}
