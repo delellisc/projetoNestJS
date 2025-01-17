@@ -4,15 +4,15 @@ GET http://localhost:3000/client
 
 ### Obtém informações de um cliente específico
 
-GET http://localhost:3000/client/1
+GET http://localhost:3000/client/2
 
 ### Atualiza informações de um cliente
+
 PATCH  http://localhost:3000/client/1
 Content-Type: application/json
 
 {
-   "name": "Kuroda",
-   "id":2
+   "name": "Kuroda"
 }
 
 ### Deleta informações de um cliente

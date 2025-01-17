@@ -22,14 +22,21 @@ export class ClientService {
   }
 
   findOne(id: number) {
-    return `This action returns a #${id} client`;
+    return this.clientRepository.findOne({where: { idClient: id }});
+    // return `This action returns a #${id} client`;
   }
 
   update(id: number, updateClientDto: UpdateClientDto) {
-    return `This action updates a #${id} client`;
+    return this.clientRepository.update(id, updateClientDto);
+    // return `This action updates a #${id} client`;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} client`;
+  async remove(id: number) {
+    const client = await this.clientRepository.findOne({where: { idClient: id }});
+    if (client){
+      return await this.clientRepository.remove(client);
+    }
+    return null;
+    //return `This action removes a #${id} client`;
   }
 }
