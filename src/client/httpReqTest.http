@@ -4,7 +4,7 @@ GET http://localhost:3000/client
 
 ### Obtém informações de um cliente específico
 
-GET http://localhost:3000/client/2
+GET http://localhost:3000/client/1
 
 ### Atualiza informações de um cliente
 
@@ -32,3 +32,20 @@ Content-Type: application/json
    "login":"bluedeer",
    "password":"123"
 }
+
+### POST login
+
+POST http://localhost:3000/auth/login 
+Content-Type: application/json
+
+{
+   "username":"naruto",
+   "password":"cabecadevento"
+} 
+
+### GET NAO AUTORIZADO
+GET http://localhost:3000/auth/profile
+
+### GET AUTORIZADO | REVER POIS NAO ESTA FUNCIONANDO
+GET http://localhost:3000/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsInVzZXJuYW1lIjoibmFydXRvIiwiaWF0IjoxNzM3MTM0NTI5LCJleHAiOjE3MzcxMzQ1ODl9.SXbXg92x5rMnCA8pu5oMHETS5YfIZ3zGfz3QJOimxys
